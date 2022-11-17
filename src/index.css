@@ -1,0 +1,65 @@
+ul {
+  margin: 0;
+};
+
+body {
+  font-family: "Helvetica Neue";
+}
+
+h3 {
+  color: #BF616A;
+}
+
+.loading {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #D78770;
+}
+
+.search {
+  position: fixed;
+  top: 20px;
+  right: 100px;
+  width: 20%;
+  height: 40px;
+}
+
+.togglable {
+  display: flex;
+  align-items: center;
+  color: #D78770;
+  cursor: pointer;
+}
+
+.togglable > img {
+  width: 25px;
+  height: 25px;
+}
+
+.togglable > .folder_name {
+  padding-left: .5rem;
+}
+
+.togglable-down::after,
+.togglable-up::after {
+  font-size: 8px;
+  margin-left: 0.5em;
+}
+
+.togglable-down::after {
+  content: "▼";
+  display: inline-block;
+}
+
+.togglable-up::after {
+  content: "▶";
+  display: inline-block;
+}
+
+.list-toggled {
+  display: none;
+}
