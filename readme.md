@@ -1,5 +1,5 @@
 TO MAKE IT WORK
-OPEN COMMAND LINE TOOLS in folder_structure
+OPEN COMMAND LINE TOOLS in current directory
 
 run command to setup all dependencies
 
