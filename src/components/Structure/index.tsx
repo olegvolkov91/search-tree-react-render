@@ -2,7 +2,6 @@ import { FC, memo } from 'react';
 
 import Folder from '../Folder';
 import File from '../File';
-import {genId} from '../../utils';
 import { StructureType, NodeType, FileType, FolderType } from '../../types/structure';
 
 type Props = {
@@ -11,14 +10,14 @@ type Props = {
 };
 
 const Structure: FC<Props> = ({ nodes, currentNode }): JSX.Element => {
-  const childNodes = nodes.map(function(currentNode) {
-    if(currentNode.type === NodeType.FOLDER) {
+  const childNodes = nodes.map((node) => {
+    if(node.type === NodeType.FOLDER) {
 
-      if ('children' in currentNode) {
-        return <Structure key={genId()} nodes={currentNode.children} currentNode={currentNode} />
+      if ('children' in node) {
+        return <Structure key={node.name} nodes={node.children} currentNode={node} />
       }
     } else {
-      return <File key={genId()} node={currentNode as FileType} />;
+      return <File key={node.name} node={node as FileType} />;
     }
   });
 
